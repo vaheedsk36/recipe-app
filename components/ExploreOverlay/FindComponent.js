@@ -13,8 +13,10 @@ export default function FindComponent() {
   };
 
   const includeBtnHandler = () => {
-    setIncludeKeyword((oldvalue) => [...oldvalue, newIncKeyword]);
-    setNewIncKeyword("");
+    if (newIncKeyword.length > 0) {
+      setIncludeKeyword((oldvalue) => [...oldvalue, newIncKeyword]);
+      setNewIncKeyword("");
+    }
   };
 
   const delInckeyword = (id) => {
@@ -31,8 +33,10 @@ export default function FindComponent() {
   };
 
   const excludeBtnHandler = () => {
-    setExcludeKeyword((oldvalue) => [...oldvalue, newExcKeyword]);
-    setNewExcKeyword("");
+    if (newExcKeyword.length > 0) {
+      setExcludeKeyword((oldvalue) => [...oldvalue, newExcKeyword]);
+      setNewExcKeyword("");
+    }
   };
 
   const delExckeyword = (id) => {
@@ -43,7 +47,7 @@ export default function FindComponent() {
   };
 
   return (
-    <div>
+    <div className="findcomponent">
       <div className="header2">
         <h1>Find a Recipe</h1>
       </div>
@@ -71,7 +75,7 @@ export default function FindComponent() {
         <div className="included-keywords">
           {includeKeyword.map((keywordData, key) => {
             return (
-              <KeywordCard 
+              <KeywordCard
                 key={key}
                 data={keywordData}
                 id={key}
@@ -96,7 +100,8 @@ export default function FindComponent() {
         <div className="excluded-keywords">
           {excludeKeyword.map((keywordData, key) => {
             return (
-              <KeywordCard style={{"backgroundColor":"red"}}
+              <KeywordCard
+                style={{ backgroundColor: "red" }}
                 key={key}
                 data={keywordData}
                 id={key}

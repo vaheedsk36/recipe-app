@@ -1,3 +1,9 @@
+.findcomponent{
+    width: 100%;
+
+}
+
+
 .findcomponent-container{
     display: grid;
     justify-content: left;
@@ -79,5 +85,6 @@
 
 div.excluded-keywords,div.included-keywords{
     display: flex;
+    flex-wrap: wrap;
     
 }
