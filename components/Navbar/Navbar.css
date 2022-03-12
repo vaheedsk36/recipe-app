@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+div.Navbar{
+    background-color: aqua;
+}
+
+div.Navbar img{
+    height: 3rem;
+    margin-top: 0;
+
+
+}
+
+
+div.Navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+
+}
+
+
+div.Navbar ul li {
+    cursor: pointer;
+   margin: 1rem; 
+}
+
+div.Navbar ul li a{
+    text-decoration: none;
+}
