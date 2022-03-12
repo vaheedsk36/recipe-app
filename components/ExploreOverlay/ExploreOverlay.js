@@ -26,8 +26,8 @@ const ExploreOverlay = (props)=>{
                    <div className="overlay-navigator-list">
 
                        <ul>
-                           <li>Find a Recipe</li>
-                           <li onClick={()=>props.setExploreOption(true)}>Explore</li>
+                           <li onClick={()=>props.setFindRecipeOption(true)}>Find a Recipe</li>
+                           <li>Explore</li>
                            <li>Breakfast and Brunch Recipes</li>
                            <li>Lunch Recipes</li>
                            <li>Dinner Recipes</li>
@@ -46,7 +46,7 @@ const ExploreOverlay = (props)=>{
                 <section className="overlay-recipes">
                     
                     <div className="displayData">
-                    {props.exploreOption?<FindComponent/>:null}
+                    {props.findRecipeOption?<FindComponent/>:null}
                     
                     </div>
                 </section>
